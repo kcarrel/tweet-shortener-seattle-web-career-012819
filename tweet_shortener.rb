@@ -9,7 +9,7 @@ end
 def word_substituter(tweet)
   replace = dictionary
   words = tweet.split(" ")
-  words.collect do |word.downcase|
+  words.downcase.collect do |word|
     dictionary.collect do |k,v|
       if word == k 
         word.replace(v)
