@@ -9,7 +9,7 @@ end
 def word_substituter(tweet)
   replace = dictionary
   words = tweet.split(" ")
-  words.collect do |word|
+  words.collect do |word.downcase|
     dictionary.collect do |k,v|
       if word == k 
         word.replace(v)
@@ -21,8 +21,8 @@ end
 
 def bulk_tweet_shortener(tweets)
   tweets.collect do |tweet|
-    tweets = word_substituter(tweet)
-    puts tweets
+    tweet = word_substituter(tweet)
+    puts tweet
   end
 end
 
